@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio Tabela </title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" id="linkEstilos">
+    
 </head>
 <body>
 <table>
+    <caption>Dados dos Visitantes</caption>
     <thead>
         <th>ID Funcionário</th>
         <th>Nome do Funcionário</th>
@@ -66,12 +68,34 @@
         
     </tbody>
 
-    <tfoot>
+    <tfoot class="footer">
         <td colspan="2" >Total de Funcionarios</td>
         <td>5</td>
     </tfoot>
 </table>
+<button type="button" id="botao"> Remover Estilos </button>
    
+<script>
+
+    function toggleEstilo(){
+        const linkEstilos = document.querySelector('#linkEstilos');
+
+        if (linkEstilos.hasAttribute('disabled')){
+            linkEstilos.removeAttribute('disabled');
+            botao.innerHTML = 'Remover Estilos';
+        /* toggle = alterna estilos*/
+         }else{
+                linkEstilos.setAttribute('disabled', '');/* define um atributo nome e valor para o elemento*/
+                botao.innerHTML = 'Aplicar Estilos';
+            }
+        
+        }
+    const botao = document.querySelector('#botao'); /* para adicionar um botao com javascript e id */
+    botao.addEventListener('click', toggleEstilo);
+    /*botao.innerHTML = 'Novo texto do botão'; /*novo texto no botão*/
+
+     
+</script>
 
 </body>
 

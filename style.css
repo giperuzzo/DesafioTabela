@@ -2,9 +2,54 @@
     margin: 0;
     padding: 0;
     box-sizing: content-box;
+    /*para os elementos do formulário ficarem baseados no mesmo tamanho*/
+
+
 }
- 
- table, tr, th, td{
-    border: 1px  solid  black;
-    border-spacing:  0;
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+table,
+tr,
+th,
+td {
+    /* colocar borda na tabela border: 1px  solid  black; */
+    border-spacing: 0;
+    /*tirar espaco entre a tabela e a celula*/
+    text-align: center;
+    padding: 10px;
+}
+
+table {
+
+    border-collapse: collapse;
+    /* Não permite que apareça uma borda entre uma coluna e outra*/
+    box-shadow: 10px 10px 8px blueviolet;
+    /*deixa uma sombra na tabela */
+    background-color: rgb(248, 235, 235) ;
+}
+
+tbody > tr:nth-child(odd) /*Serve para se referir a um filho especifico de um elemnto e colorir a linha par*/ {
+    background-color: rgb(233, 36, 233);
+}
+
+tbody >tr:nth-child(even) /* para colorir ou tirar cor das linhas impares*/
+
+{
+    background-color: rgb(231, 220, 231);
+}
+
+tfoot {
+    background-color: antiquewhite;
+}
+
+caption { /*
+    margin-top: 20px;
+    caption-side: bottom;
+    font-size: 12pt;
+}*/
